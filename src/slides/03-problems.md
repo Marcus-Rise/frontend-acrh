@@ -9,7 +9,7 @@
 
 ## Оптимальный вариант архитектуры frontend для проекта "B2B"
 
-![nodejs](https://cdn.iconscout.com/icon/free/png-256/nodejs-2-226035.png) ![frame](https://b.thumbs.redditmedia.com/8RJ1zsSxLbTrSrRAhziwMynfkWVcuFNMXPsLqtGct1o.png) ![nginx](https://ontospace.ru/assets/technologies/nginx.png)
+![scheme](./scheme.png)
 
 -  Минимизация нагрузки на серверы бизнес логики (api)
 -  Повышение производительности
