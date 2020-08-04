@@ -13,9 +13,13 @@
 
 ![performance](https://miro.medium.com/max/512/0*R5D3K-zTNv6xpwZg)
 
+([источник](https://medium.com/@yuiltripathee/node-js-vs-php-comparison-get-the-job-done-purpose-d3d63351ea8a))
+
 -  NodeJs может обрабатывать больше одновременных пользователей, чем PHP
 -  PHP лучше работает с высокой вычислительной нагрузкой и может быстрее загружать большие наборы данных
 
+Настоятельно к ознакомлению [Symfony vs Express: A Server-Side Framework Comparison](https://www.diva-portal.org/smash/get/diva2:1327290/FULLTEXT01.pdf)
+ 
 ---
 
 ## Инкапсуляция логики клиентского приложения
