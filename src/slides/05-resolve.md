@@ -64,6 +64,9 @@ const Index: React.FC<IMainPageUrlProps> = (props) => {
 ```typescript
 // src/server/controller.ts
 class Controller {
+    @Get(MAIN_PAGE_URL)
+    @Render("index.tsx")
+    @Auth()
     async index(dto: TaskIndexPageRequestDto): Promise<IMainPageUrlProps> {
         const dateStart = getMinDateInMonth();
         const dateEnd = getMaxDateInMonth();
