@@ -44,7 +44,7 @@ export interface IMainPageUrlProps extends ITaskArrayStatistic {
     dateEnd: string;
 }
 ```
-(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/contracts/MainPage.ts]
+[полный код](https://git.astrovolga.ru/web/timesheet/-/blob/master/src/contracts/MainPage.ts)
 
 ---
 
@@ -56,7 +56,7 @@ const Index: React.FC<IMainPageUrlProps> = (props) => {
     const [dateEnd, setDateEnd] = useState<Date>(new Date(props.dateEnd));
 ```
 
-(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/client/views/index.tsx]
+[полный код](https://git.astrovolga.ru/web/timesheet/-/blob/master/src/client/views/index.tsx)
 
 --- 
 ### Контроллер
@@ -79,7 +79,7 @@ class Controller {
     }
 }
 ```
-(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/server/task/task.controller.ts#L45]
+[полный код](https://git.astrovolga.ru/web/timesheet/-/blob/master/src/server/task/task.controller.ts#L45)
 
 ---
 
