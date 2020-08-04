@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/frontend-architecture`,
   siteMetadata: {
     name: `Илья Константинов`,
     title: `Архитектура Frontend`,
