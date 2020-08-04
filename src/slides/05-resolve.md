@@ -51,6 +51,8 @@ export interface IMainPageUrlProps extends ITaskArrayStatistic {
 ### Шаблон 
 ```typescript jsx
 // src/client/views/index.tsx
+import { IMainPageUrlProps } from "../../contracts/MainPage";
+
 const Index: React.FC<IMainPageUrlProps> = (props) => {
     const [dateStart, setDateStart] = useState<Date>(new Date(props.dateStart));
     const [dateEnd, setDateEnd] = useState<Date>(new Date(props.dateEnd));
@@ -63,6 +65,8 @@ const Index: React.FC<IMainPageUrlProps> = (props) => {
 
 ```typescript
 // src/server/controller.ts
+import { IMainPageUrlProps, MAIN_PAGE_URL } from "../../contracts/MainPage";
+
 class Controller {
     @Get(MAIN_PAGE_URL)
     @Render("index.tsx")
