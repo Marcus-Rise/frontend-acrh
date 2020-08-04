@@ -16,7 +16,7 @@ COPY ./gatsby-config.js gatsby-config.js
 COPY ./.prettierrc .prettierrc
 
 RUN npm run build
-RUN find out -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
+RUN find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
 
 FROM scratch AS artifacts
 
