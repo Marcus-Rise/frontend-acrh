@@ -1,5 +1,6 @@
 {
   "name": "gatsby-deck",
+  "homepage": "https://marcus_rise.gitlab.io/frontend-architecture/",
   "description": "Create presentations using Gatsby, React & Markdown.",
   "version": "2.0.0",
   "author": "Fabian Schultz <desk@fabianschultz.com>",
