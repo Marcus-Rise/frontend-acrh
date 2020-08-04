@@ -29,6 +29,60 @@
 
 ---
 
+### Контракт 
+
+```typescript
+// src/contracts/MainPage.ts
+import { ITask } from "./ITask";
+import { ITaskArrayStatistic } from "../server/task/i-task.service";
+
+export const MAIN_PAGE_URL = "/";
+
+export interface IMainPageUrlProps extends ITaskArrayStatistic {
+    tasks: ITask[];
+    dateStart: string;
+    dateEnd: string;
+}
+```
+(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/contracts/MainPage.ts]
+
+---
+
+### Шаблон 
+```typescript jsx
+// src/client/views/index.tsx
+const Index: React.FC<IMainPageUrlProps> = (props) => {
+    const [dateStart, setDateStart] = useState<Date>(new Date(props.dateStart));
+    const [dateEnd, setDateEnd] = useState<Date>(new Date(props.dateEnd));
+```
+
+(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/client/views/index.tsx]
+
+--- 
+### Контроллер
+
+```typescript
+// src/server/controller.ts
+class Controller {
+    async index(dto: TaskIndexPageRequestDto): Promise<IMainPageUrlProps> {
+        const dateStart = getMinDateInMonth();
+        const dateEnd = getMaxDateInMonth();
+        const tasks = await this.taskService.getTasks(dateStart, dateEnd, dto.userId);
+        const statistic = this.taskService.getStatistic(tasks);
+
+        return {
+            dateStart: dateStart.toISOString(),
+            dateEnd: dateEnd.toISOString(),
+            tasks: tasks.map((i) => new TaskDto(i)),
+            ...statistic,
+        };
+    }
+}
+```
+(полный код)[https://git.astrovolga.ru/web/timesheet/-/blob/master/src/server/task/task.controller.ts#L45]
+
+---
+
 ## Более быстрый CI/CD
 
 -  Инкапсуляция конфигурации в ограниченном контексте клиентского приложения
