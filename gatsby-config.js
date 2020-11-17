@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     name: `Илья Константинов`,
     title: `Архитектура Frontend`,
-    date: `4 августа, 2020`,
+    date: `Ноябрь 18, 2020`,
   },
   plugins: [
     `gatsby-plugin-layout`,
